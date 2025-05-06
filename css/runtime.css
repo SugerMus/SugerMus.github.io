@@ -9,7 +9,7 @@
 
 /* 针对 id 为 runtime 的 div 元素进行样式设置 */
 div#runtime {
-  width: 180px;
+  width: 380px;
   margin: auto;
   color: #fff;
   padding-inline: 5px;
