@@ -1,52 +1,107 @@
 /* 引入 Orbitron 字体 */
 @font-face {
-    font-family: 'Orbitron';
-    src: url('https://fonts.gstatic.com/s/orbitron/v25/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWgz.woff2') format('woff2');
-    font-weight: 290;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Orbitron';
+  src: url('https://fonts.gstatic.com/s/orbitron/v25/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWgz.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
+/* 针对 id 为 runtime 的 div 元素进行样式设置 */
 div#runtime {
-    width: 500px;
-    margin: auto;
-    color: #fff;
-    padding-inline: 5px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
-    text-align: center;
+  width: 180px;
+  margin: auto;
+  color: #fff;
+  padding-inline: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
 
-/* 时分秒之间添加间隔 */
+/* 为 id 为 runtime 的 div 元素内的 span 元素添加样式，用于在时分秒之间添加间隔 */
 div#runtime span {
-    padding: 0 3px;
+  padding: 0 3px;
 }
 
+/* 当处于深色主题下，针对 id 为 runtime 的 div 元素进行样式设置 */
 [data-theme="dark"] div#runtime {
-    color: #28b4c8;
-    box-shadow: 0 0 5px rgba(28, 69, 218, 0.71);
-    animation: flashlight 1s linear infinite alternate;
+  color: #28b4c8;
+  box-shadow: 0 0 5px rgba(28, 69, 218, 0.71);
+  animation: flashlight 1s linear infinite alternate;
 }
 
+/* 定义名为 flashlight 的动画，适用于标准浏览器 */
 @keyframes flashlight {
-    from {
-        box-shadow: 0 0 5px rgba(28, 69, 218, 0.71);
-    }
-    to {
-        box-shadow: 0 0 15px rgba(28, 69, 218, 0.9);
-    }
+  from {
+      box-shadow: 0 0 5px #1478d2;
+  }
+  50% {
+      box-shadow: 0 0 8px #28b4c8;
+  }
+  to {
+      box-shadow: 0 0 2px #1478d2;
+  }
 }
-    
-/*悬停显示徽标提示语*/
+
+/* 定义名为 flashlight 的动画，适用于 Mozilla 内核浏览器（如 Firefox） */
+@-moz-keyframes flashlight {
+  from {
+      box-shadow: 0 0 5px #1478d2;
+  }
+  50% {
+      box-shadow: 0 0 8px #28b4c8;
+  }
+  to {
+      box-shadow: 0 0 2px #1478d2;
+  }
+}
+
+/* 定义名为 flashlight 的动画，适用于 WebKit 内核浏览器（如 Safari、Chrome） */
+@-webkit-keyframes flashlight {
+  from {
+      box-shadow: 0 0 5px #1478d2;
+  }
+  50% {
+      box-shadow: 0 0 8px #28b4c8;
+  }
+  to {
+      box-shadow: 0 0 2px #1478d2;
+  }
+}
+
+/* 定义名为 flashlight 的动画，适用于 Opera 浏览器 */
+@-o-keyframes flashlight {
+  from {
+      box-shadow: 0 0 5px #1478d2;
+  }
+  50% {
+      box-shadow: 0 0 8px #28b4c8;
+  }
+  to {
+      box-shadow: 0 0 2px #1478d2;
+  }
+}
+
+/* 当处于浅色主题下，针对 id 为 runtime 的 div 元素进行样式设置 */
+[data-theme="light"] div#runtime {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  animation: none;
+}
+
+/* 当鼠标悬停在类名为 github-badge 的 a 元素上时，显示提示语 */
 a.github-badge:hover:before {
   position: fixed;
   width: fit-content;
   margin: auto;
   left: 0;
   right: 0;
-  top: 10%;
+  /* 调整到页面中间位置 */
+  top: 50%;
+  transform: translateY(-50%); 
   border-radius: 10px;
   text-align: center;
   z-index: 100;
@@ -55,39 +110,24 @@ a.github-badge:hover:before {
   color: #fff;
   padding: 10px;
   background-color: var(--text-bg-hover);
+  /* 添加淡入动画 */
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
 }
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+/* 当处于深色主题下，鼠标悬停在类名为 github-badge 的 a 元素上时，显示提示语的样式 */
 [data-theme=dark] a.github-badge:hover:before {
   background-color: rgba(18,18,18,0.8);
 }
-@-moz-keyframes flashlight {
-  from {
-    box-shadow: 0 0 5px #1478d2;
-  }
-  to {
-    box-shadow: 0 0 2px #1478d2;
-  }
-}
-@-webkit-keyframes flashlight {
-  from {
-    box-shadow: 0 0 5px #1478d2;
-  }
-  to {
-    box-shadow: 0 0 2px #1478d2;
-  }
-}
-@-o-keyframes flashlight {
-  from {
-    box-shadow: 0 0 5px #1478d2;
-  }
-  to {
-    box-shadow: 0 0 2px #1478d2;
-  }
-}
-@keyframes flashlight {
-  from {
-    box-shadow: 0 0 5px #1478d2;
-  }
-  to {
-    box-shadow: 0 0 2px #1478d2;
-  }
+
+/* 当处于浅色主题下，鼠标悬停在类名为 github-badge 的 a 元素上时，显示提示语的样式 */
+[data-theme=light] a.github-badge:hover:before {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
 }
