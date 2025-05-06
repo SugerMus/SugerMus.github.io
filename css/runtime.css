@@ -1,30 +1,93 @@
-/* 整体页面样式 */
-body {
-  font - family: Arial, sans - serif;
-  background - image: url('your - background - image.jpg'); /* 替换为实际背景图片路径 */
-  background - size: cover;
-  background - position: center;
-  color: white;
-  padding: 20px;
+/* 引入 Orbitron 字体 */
+@font-face {
+    font-family: 'Orbitron';
+    src: url('https://fonts.gstatic.com/s/orbitron/v25/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWgz.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* 运行时间和状态区域样式 */
-#workboard {
-  width: 100%;
-  margin - bottom: 20px;
+div#runtime {
+    width: 180px;
+    margin: auto;
+    color: #fff;
+    padding-inline: 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    text-align: center;
 }
 
-#status {
-  font - size: 18px;
-  margin - right: 10px;
+/* 时分秒之间添加间隔 */
+div#runtime span {
+    padding: 0 3px;
 }
 
-#runtime {
-  font - size: 16px;
+[data-theme="dark"] div#runtime {
+    color: #28b4c8;
+    box-shadow: 0 0 5px rgba(28, 69, 218, 0.71);
+    animation: flashlight 1s linear infinite alternate;
 }
 
-/* 额外信息区域样式 */
-#extra - info p {
-  margin: 10px 0;
-  font - size: 16px;
+@keyframes flashlight {
+    from {
+        box-shadow: 0 0 5px rgba(28, 69, 218, 0.71);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(28, 69, 218, 0.9);
+    }
+}
+    
+/*悬停显示徽标提示语*/
+a.github-badge:hover:before {
+  position: fixed;
+  width: fit-content;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10%;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 100;
+  content: attr(data-title);
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  background-color: var(--text-bg-hover);
+}
+[data-theme=dark] a.github-badge:hover:before {
+  background-color: rgba(18,18,18,0.8);
+}
+@-moz-keyframes flashlight {
+  from {
+    box-shadow: 0 0 5px #1478d2;
+  }
+  to {
+    box-shadow: 0 0 2px #1478d2;
+  }
+}
+@-webkit-keyframes flashlight {
+  from {
+    box-shadow: 0 0 5px #1478d2;
+  }
+  to {
+    box-shadow: 0 0 2px #1478d2;
+  }
+}
+@-o-keyframes flashlight {
+  from {
+    box-shadow: 0 0 5px #1478d2;
+  }
+  to {
+    box-shadow: 0 0 2px #1478d2;
+  }
+}
+@keyframes flashlight {
+  from {
+    box-shadow: 0 0 5px #1478d2;
+  }
+  to {
+    box-shadow: 0 0 2px #1478d2;
+  }
 }
