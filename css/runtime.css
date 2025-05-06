@@ -1,0 +1,30 @@
+/* 整体页面样式 */
+body {
+  font - family: Arial, sans - serif;
+  background - image: url('your - background - image.jpg'); /* 替换为实际背景图片路径 */
+  background - size: cover;
+  background - position: center;
+  color: white;
+  padding: 20px;
+}
+
+/* 运行时间和状态区域样式 */
+#workboard {
+  width: 100%;
+  margin - bottom: 20px;
+}
+
+#status {
+  font - size: 18px;
+  margin - right: 10px;
+}
+
+#runtime {
+  font - size: 16px;
+}
+
+/* 额外信息区域样式 */
+#extra - info p {
+  margin: 10px 0;
+  font - size: 16px;
+}
