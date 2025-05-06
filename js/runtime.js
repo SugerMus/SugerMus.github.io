@@ -1,38 +1,20 @@
-// 设置网站创建时间（这里以当前时间往前推85天为例，可根据实际情况修改）
-const create_time = new Date();
-create_time.setDate(create_time.getDate() - 85);
 
-// 获取相关DOM元素
-const statusElement = document.getElementById('status');
-const runtimeElement = document.getElementById('runtime');
-const voyagerDistanceElement = document.getElementById('voyager - distance');
-const astronomicalUnitsElement = document.getElementById('astronomical - units');
-
-// 每秒更新一次时间信息
-setInterval(() => {
-  const now = new Date();
-  const diff = now - create_time;
-  const second = Math.floor(diff / 1000);
-  const year = Math.floor(second / (365 * 24 * 3600));
-  const day = Math.floor((second % (365 * 24 * 3600)) / (24 * 3600));
-  const hour = Math.floor((second % (24 * 3600)) / 3600);
-  const minute = Math.floor((second % 3600) / 60);
-  const sec = second % 60;
-
-  // 营业状态判断（假设7点 - 22点营业）
-  const currentHour = now.getHours();
-  if (currentHour >= 7 && currentHour < 22) {
-    statusElement.innerHTML = '🍵 F小屋 营业中';
-  } else {
-    statusElement.innerHTML = '🍵 F小屋 打烊休息啦';
-  }
-
-  // 渲染运行时间
-  runtimeElement.innerHTML = `本站居然运行了 ${year} 年 ${day} 天 ${hour} 小时 ${minute} 分 ${sec} 秒 ❤️`;
-
-  // 模拟旅行者1号距离数据（这里随机生成近似值，实际可从API获取真实数据）
-  const randomDistance = Math.random() * 1000000000 + 23537957418;
-  const astronomicalUnits = randomDistance / 149597870.7;
-  voyagerDistanceElement.innerHTML = randomDistance;
-  astronomicalUnitsElement.innerHTML = astronomicalUnits.toFixed(6);
-}, 1000);
+//本站运行时间
+function show_date_time(){
+$('.framework-info').html('本站已运行<span id="span_dt_dt" style="color: #fff;"></span>');
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("1/20/2021 0:0:0");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=Math.floor(e_hrsold);
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=Math.floor((e_hrsold-hrsold)*60);
+seconds=Math.floor((e_minsold-minsold)*60);
+span_dt_dt.innerHTML='<font style=color:#afb4db>'+daysold+'</font> 天 <font style=color:#f391a9>'+hrsold+'</font> 时 <font style=color:#fdb933>'+minsold+'</font> 分 <font style=color:#a3cf62>'+seconds+'</font> 秒';
+}
