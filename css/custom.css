@@ -1,3 +1,5 @@
+
+
 /* 页脚与头图透明 */
 #footer {
   background: transparent !important;
@@ -260,9 +262,10 @@
   border-radius: 8px;
 }
 
+/*页面样式调节 */
 :root {
-  --trans-light: rgba(255, 255, 255, 0.88);
-  --trans-dark: rgba(25, 25, 25, 0.88);
+  --trans-light: rgba(255, 255, 255, 0.77);
+  --trans-dark: rgba(25, 25, 25, 0.66);
   --border-style: 1px solid rgb(169, 169, 169);
   --backdrop-filter: blur(5px) saturate(150%);
 }
@@ -312,7 +315,7 @@ div#archive {
   background: var(--trans-dark);
 }
 
-/*页面样式调节 */
+
 /* 夜间模式页脚页头遮罩透明 */
 [data-theme="dark"] #footer::before {
   background: transparent !important;
