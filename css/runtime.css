@@ -2,13 +2,13 @@
 @font-face {
     font-family: 'Orbitron';
     src: url('https://fonts.gstatic.com/s/orbitron/v25/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWgz.woff2') format('woff2');
-    font-weight: 400;
+    font-weight: 290;
     font-style: normal;
     font-display: swap;
 }
 
 div#runtime {
-    width: 180px;
+    width: 500px;
     margin: auto;
     color: #fff;
     padding-inline: 5px;
