@@ -46,3 +46,8 @@
   /* 定义显示样式 */
   font-display: block;
 }
+
+#pagination {
+  width: 100%;
+  margin: auto;
+}
