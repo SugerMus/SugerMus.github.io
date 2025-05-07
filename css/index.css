@@ -4328,11 +4328,11 @@ figure.highlight pre .javascript .function {
   transition: box-shadow 0.3s ease-in-out;
   overflow: hidden;
   border-radius: 12px !important;
-  background: -webkit-linear-gradient(45deg, #ffedf8, #ffe5f4, #e1dbf5);
-  background: -moz-linear-gradient(45deg, #ffedf8, #ffe5f4, #e1dbf5);
-  background: -o-linear-gradient(45deg, #ffedf8, #ffe5f4, #e1dbf5);
-  background: -ms-linear-gradient(45deg, #ffedf8, #ffe5f4, #e1dbf5);
-  background: linear-gradient(45deg, #ffedf8, #ffe5f4, #e1dbf5);
+  background: -webkit-linear-gradient(45deg, #f0f2f6, #f0f2f6, #f8d8dc);
+  background: -moz-linear-gradient(45deg, #f0f2f6, #f0f2f6, #f8d8dc);
+  background: -o-linear-gradient(45deg, #f0f2f6, #f0f2f6, #f8d8dc);
+  background: -ms-linear-gradient(45deg, #f0f2f6, #f0f2f6, #f8d8dc);
+  background: linear-gradient(45deg, #f0f2f6, #f0f2f6, #f8d8dc);
 }
 #post .post-copyright:before {
   background: var(--heo-post-blockquote-bg);

@@ -262,7 +262,7 @@
   border-radius: 8px;
 }
 
-/* 首页渐变 */
+
 /*页面样式调节 */
 :root {
   --trans-light: rgba(255, 255, 255, 0.77);
@@ -343,6 +343,7 @@ div#archive {
   color: #ffffff;
 }
 
+/* 顶部渐变 */
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
