@@ -451,23 +451,23 @@ div#archive {
 }
 @keyframes huxi_light {
   0% {
-    box-shadow: 0px 0px 1px 1px #e9f5fa;
+    box-shadow: 0px 0px 1px 1px #7cff00;
   }
   50% {
-    box-shadow: 0px 0px 5px 5px #e9f5fa;
+    box-shadow: 0px 0px 5px 5px #7cff00;
   }
   100% {
-    box-shadow: 0px 0px 1px 1px #e9f5fa;
+    box-shadow: 0px 0px 1px 1px #7cff00;
   }
 }
 @keyframes huxi_dark {
   0% {
-    box-shadow: 0px 0px 1px 1px #39c5bb;
+    box-shadow: 0px 0px 1px 1px #007bff;
   }
   50% {
-    box-shadow: 0px 0px 5px 5px #39c5bb;
+    box-shadow: 0px 0px 5px 5px #007bff;
   }
   100% {
-    box-shadow: 0px 0px 1px 1px #39c5bb;
+    box-shadow: 0px 0px 1px 1px #007bff;
   }
 }
