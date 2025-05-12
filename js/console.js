@@ -61,7 +61,7 @@ function createtime2() {
     setTimeout(
         console.warn.bind(
             console,
-            "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+            "%c ⚡ Powered by Suger %c 你正在访问Sugerの小家",
             "color:white; background-color:#f0ad4e",
             ""
         )
