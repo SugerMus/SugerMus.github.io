@@ -4594,8 +4594,8 @@ figure.highlight pre .javascript .function {
   border-radius: 30px;
 }
 .post-reward .reward-button:hover {
-  -webkit-box-shadow: inset 20em 0 0 0 var(--btn-hover-color);
-  box-shadow: inset 20em 0 0 0 var(--btn-hover-color);
+  -webkit-box-shadow: inset 30em 0 0 0 var(--btn-hover-color);
+  box-shadow: inset 30em 0 0 0 var(--btn-hover-color);
 }
 .post-reward .reward-button:hover .reward-main {
   display: -webkit-box;
@@ -4608,11 +4608,11 @@ figure.highlight pre .javascript .function {
 .post-reward .reward-button .reward-main {
   position: absolute;
   bottom: 40px;
-  left: -55%;
+  left: -45%;
   z-index: 100;
   display: none;
   padding: 0 0 15px;
-  width: 150%;
+  width: 180%;
 }
 .post-reward .reward-button .reward-main .reward-all {
   display: -webkit-box;
