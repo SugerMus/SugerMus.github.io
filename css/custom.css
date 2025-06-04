@@ -38,7 +38,7 @@
 
 @font-face {
   /* 为载入的字体取名字(随意) */
-  font-family: 'kaishi';	
+  font-family: 'kaishu';	
   /* 字体文件地址(相对或者绝对路径都可以) */
   src: url(/font/kaishu.ttf);
   /* 定义加粗样式(加粗多少) */
@@ -613,14 +613,14 @@ div#archive {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 32px;
+    height: 36px;
     max-width: none;
     background: #bcb0a4 url(https://p.qjqq.cn/cover/202410191400532.png/color) repeat center;
     background-size: auto 100%;
     box-shadow: 0 4px 7px rgba(0,0,0,.15);
 }
 
-@media screen and (max-width: 1066px) {
+@media screen and (max-width: 1023px) {
     #footer-animal .animal-wall {
         height:4vw
     }
